@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+//Губанов П.Р. - 2 курс, 9 группа
+//Лаба 5 на внешние сортировки - многопутевое однофазное естественное несбалансированное слияние
+//Номер задания 1Е:
+// Вывести названия конфет и их изготовителей в порядке возрастания срока хранения конфет.
 
 namespace Laba5_ExternalSort
 {

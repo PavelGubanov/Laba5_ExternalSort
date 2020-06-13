@@ -5,14 +5,15 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Laba5_ExternalSort
 {
     [Serializable]
+    //Класс для коробки с конфетами
     public class CandyBox
     {
-        string _name; 
-        double _weight;
-        double _cost;
-        string _producer;
-        DateTime _issueDate;
-        int _shelfLife;
+        string _name; //название конфет
+        double _weight; //вес коробки
+        double _cost; //цена коробки
+        string _producer; //производитель
+        DateTime _issueDate; //дата изготовления конфет
+        int _shelfLife; //срок хранения
 
         public string Name
         {
@@ -101,13 +102,13 @@ namespace Laba5_ExternalSort
             _issueDate = issueDate;
             _shelfLife = shelfLife;
         }
-
+        //Записывает текущую запись о конфетах в поток fileStream бинарного файла 
         public void Write(FileStream fileStream)
         {
             BinaryFormatter formatter = new BinaryFormatter();
             formatter.Serialize(fileStream, this);
         }
-
+        //Возвращает следующую запись о коробке с конфетами из потока fileStream бинарного файла
         public static CandyBox GetNextFromStream(FileStream fileStream)
         {
             if (fileStream.Position == fileStream.Length)
